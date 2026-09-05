@@ -26,7 +26,6 @@ packages/
 .vs/
 .vscode/
 .tlog/
-**/bin/
 **/obj/
 UpgradeLog.htm
 *.tlog

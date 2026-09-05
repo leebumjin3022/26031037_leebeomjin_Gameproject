@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj": {}
+  },
+  "projects": {
+    "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj",
+        "projectName": "olympic",
+        "projectPath": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj",
+        "packagesPath": "C:\\Users\\GALAXY\\.nuget\\packages\\",
+        "outputPath": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GALAXY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows7.0",
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Vortice.Direct2D1": {
+              "target": "Package",
+              "version": "[3.8.3, )"
+            },
+            "Vortice.WinForms": {
+              "target": "Package",
+              "version": "[3.8.3, )"
+            },
+            "Vortice.XAudio2": {
+              "target": "Package",
+              "version": "[3.8.3, )"
+            },
+            "Vortice.XInput": {
+              "target": "Package",
+              "version": "[3.8.3, )"
+            },
+            "glc2dcsharp": {
+              "target": "Package",
+              "version": "[0.1.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.317/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
