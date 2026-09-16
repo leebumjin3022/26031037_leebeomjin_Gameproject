@@ -876,19 +876,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GALAXY\\.nuget\\packages\\": {}
+    "C:\\Users\\ds007\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj",
+      "projectUniqueName": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\olympic\\olympic.csproj",
       "projectName": "olympic",
-      "projectPath": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\olympic.csproj",
-      "packagesPath": "C:\\Users\\GALAXY\\.nuget\\packages\\",
-      "outputPath": "C:\\이범진\\26031037_leebeomjin_Gameproject\\olympic\\olympic\\obj\\",
+      "projectPath": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\olympic\\olympic.csproj",
+      "packagesPath": "C:\\Users\\ds007\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\olympic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\GALAXY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ds007\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -964,7 +964,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.317/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
