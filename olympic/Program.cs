@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            using GameMain app = new();
+            app.Run();
         }
     }
 }

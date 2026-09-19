@@ -79,4 +79,7 @@ class G2Texture : IDisposable
 		}
 		_textureData = null;
 	}
+    // G2Texture.cs — 클래스 안에 추가
+    public float Width => _textureData!.Bitmap.Size.Width;
+    public float Height => _textureData!.Bitmap.Size.Height;
 }

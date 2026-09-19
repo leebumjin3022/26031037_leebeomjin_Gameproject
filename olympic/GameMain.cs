@@ -1,48 +1,66 @@
-﻿// -------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Author: 3dapi (https://github.com/3dapi)
-// -------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+﻿using System.Drawing;
+using System.Windows.Forms;
 using Vortice.Mathematics;
 
 class GameMain : G2AppBase
 {
-	public override System.Drawing.Size ScreenSize => GameGlobal.ScreenSize;
-	public override string GameName => GameGlobal.GameName;
+    public override System.Drawing.Size ScreenSize => GameGlobal.ScreenSize;
+    public override string GameName => GameGlobal.GameName;
 
-	protected override void Initialize()
-	{
-		//---------------------------------------
-		// 게임 관련 객체를 생성합니다.
-		//---------------------------------------
-	}
+    private G2Texture? _bgTexture;
+    private G2Texture? _logoTexture;
+    private G2Texture? _startButtonTexture;
 
-	protected override void Update()
-	{
-		double elapsed = TotalTime;
+    private PointF _logoPosition;
+    private PointF _startButtonPosition;
 
-		this.ClearColor = new Color4(
-			red: (float)(Math.Sin(elapsed) * 0.5 + 0.5),
-			green: (float)(Math.Sin(elapsed + Math.PI / 2.0) * 0.5 + 0.5),
-			blue: (float)(Math.Sin(elapsed + Math.PI) * 0.5 + 0.5),
-			alpha: 1.0f);
+    protected override void Initialize()
+    {
+        _bgTexture = new G2Texture("main.png");
+        _logoTexture = new G2Texture("logo.png");
+        _startButtonTexture = new G2Texture("start.png");
 
-		//---------------------------------------
-		// 게임 관련 객체를 갱신합니다.
-		//---------------------------------------
-	}
+        // 로고: 화면 상단 중앙
+        _logoPosition = new PointF(
+            (ScreenSize.Width - _logoTexture.Width) / 2f,
+            80f);
 
-	protected override void Render()
-	{
-		//---------------------------------------
-		// 게임 관련 객체를 렌더링 합니다.
-		//---------------------------------------
-	}
+        // 시작 버튼: 화면 하단 중앙
+        _startButtonPosition = new PointF(
+            (ScreenSize.Width - _startButtonTexture.Width) / 2f,
+            ScreenSize.Height - _startButtonTexture.Height - 80f);
+    }
 
-	public override void Dispose()
-	{
-		base.Dispose();
-		//---------------------------------------
-		// 게임 관련 객체를 해제합니다.
-		//---------------------------------------
-	}
+    protected override void Update()
+    {
+        var buttonRect = new RectangleF(
+            _startButtonPosition.X, _startButtonPosition.Y,
+            _startButtonTexture!.Width, _startButtonTexture.Height);
+
+        if (Input.IsButtonDown(MouseButtons.Left) && buttonRect.Contains(Input.MousePosition))
+        {
+            // TODO: 8강 대진표 화면으로 전환 (다음 단계에서 구현)
+        }
+    }
+
+    protected override void Render()
+    {
+        // 배경: 화면 전체(960x640)에 꽉 차게 스트레치
+        var screenRect = new Rect(0f, 0f, ScreenSize.Width, ScreenSize.Height);
+        var bgSourceRect = new Rect(0f, 0f, _bgTexture!.Width, _bgTexture.Height);
+        _bgTexture.Draw(screenRect, bgSourceRect);
+
+        // 로고 & 버튼: 원본 크기 그대로
+        _logoTexture!.Draw(_logoPosition.X, _logoPosition.Y);
+        _startButtonTexture!.Draw(_startButtonPosition.X, _startButtonPosition.Y);
+    }
+
+    public override void Dispose()
+    {
+        base.Dispose();
+        _bgTexture?.Dispose();
+        _logoTexture?.Dispose();
+        _startButtonTexture?.Dispose();
+    }
 }
+
