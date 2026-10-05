@@ -34,3 +34,7 @@ C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\obj\Debug\ne
 C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\obj\Debug\net9.0-windows8.0\rsp.pdb
 C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\obj\Debug\net9.0-windows8.0\rsp.genruntimeconfig.cache
 C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\obj\Debug\net9.0-windows8.0\ref\rsp.dll
+C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\bin\Debug\net9.0-windows8.0\images\blue.png
+C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\bin\Debug\net9.0-windows8.0\images\paper.png
+C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\bin\Debug\net9.0-windows8.0\images\red.png
+C:\Users\ds007\OneDrive\Desktop\26031037_leebeomjin_Gameproject\rsp\bin\Debug\net9.0-windows8.0\images\rock.png

@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{2FD4EBEB-E0BD-44E2-AFF4-47A4B760EAB7}|rsp.csproj|c:\\users\\ds007\\onedrive\\desktop\\26031037_leebeomjin_gameproject\\rsp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FD4EBEB-E0BD-44E2-AFF4-47A4B760EAB7}|rsp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD4EBEB-E0BD-44E2-AFF4-47A4B760EAB7}|rsp.csproj|c:\\users\\ds007\\onedrive\\desktop\\26031037_leebeomjin_gameproject\\rsp\\rsp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{2FD4EBEB-E0BD-44E2-AFF4-47A4B760EAB7}|rsp.csproj|solutionrelative:rsp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,13 +26,24 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\rsp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\rsp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\rsp\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAANYAAAAAAAAAAAAlwOsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-02T15:29:48.697Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "rsp",
+              "DocumentMoniker": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\rsp\\rsp.csproj",
+              "RelativeDocumentMoniker": "rsp.csproj",
+              "ToolTip": "C:\\Users\\ds007\\OneDrive\\Desktop\\26031037_leebeomjin_Gameproject\\rsp\\rsp.csproj",
+              "RelativeToolTip": "rsp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-03T16:20:33.03Z"
             }
           ]
         }
