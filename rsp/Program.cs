@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 // ===================== 프로그램 시작점 =====================
 internal class Program
@@ -133,6 +134,11 @@ internal class GameForm : Form
     private PictureBox picPlayerHand, picEnemyHand;
     private Label lblInfo, lblResult, lblBlue, lblRed;
 
+    // 배경음악
+    private WaveOutEvent bgmDevice;
+    private AudioFileReader bgmReader;
+    private bool closing;
+
     public GameForm()
     {
         Text = "묵찌빠";
@@ -151,6 +157,51 @@ internal class GameForm : Form
         Controls.Add(pnlStart);
         Controls.Add(pnlGame);
         ShowStartScreen();
+        PlayBgm();
+    }
+
+    // ---------- 파일 경로 찾기 ----------
+    // 실행 폴더에서 위쪽 폴더로 올라가며 파일을 찾는다 (없으면 null)
+    private static string FindPath(string folder, string fileName)
+    {
+        string dir = AppDomain.CurrentDomain.BaseDirectory;
+
+        for (int i = 0; i < 6 && !string.IsNullOrEmpty(dir); i++)
+        {
+            string path = Path.Combine(dir, folder, fileName);
+            if (File.Exists(path)) return path;
+            dir = Path.GetDirectoryName(dir.TrimEnd(Path.DirectorySeparatorChar));
+        }
+        return null;
+    }
+
+    // ---------- 배경음악 ----------
+    private void PlayBgm()
+    {
+        string path = FindPath("sounds", "bgm.mp3");
+        if (path == null) return; // 파일이 없으면 소리 없이 진행
+
+        bgmReader = new AudioFileReader(path);
+        bgmDevice = new WaveOutEvent();
+        bgmDevice.Init(bgmReader);
+        bgmDevice.Volume = 0.5f; // 소리 크기 0.0 ~ 1.0
+
+        // 끝나면 처음으로 되돌려 반복 재생
+        bgmDevice.PlaybackStopped += (s, e) =>
+        {
+            if (closing) return;
+            bgmReader.Position = 0;
+            bgmDevice.Play();
+        };
+        bgmDevice.Play();
+    }
+
+    protected override void OnFormClosing(FormClosingEventArgs e)
+    {
+        closing = true;
+        bgmDevice?.Dispose();
+        bgmReader?.Dispose();
+        base.OnFormClosing(e);
     }
 
     // ---------- 이미지 불러오기 ----------
@@ -173,7 +224,8 @@ internal class GameForm : Form
             dir = Path.GetDirectoryName(dir.TrimEnd(Path.DirectorySeparatorChar));
         }
 
-        throw new FileNotFoundException("이미지를 찾을 수 없습니다: " + ImageFolder + "\\" + fileName);
+        throw new FileNotFoundException(
+            "이미지를 찾을 수 없습니다: " + ImageFolder + "\\" + fileName);
     }
 
     // ---------- 시작 화면 ----------
@@ -190,7 +242,7 @@ internal class GameForm : Form
         pnlStart.Controls.Add(MakeImageBox(LoadImage(FileLogo), 50, 30, 800, 260));
 
         // 시작 버튼
-        PictureBox btnStart = MakeImageBox(LoadImage(FileStart), 330, 340, 240, 110);
+        PictureBox btnStart = MakeImageBox(LoadImage(FileStart), 290, 320, 320, 150);
         btnStart.Cursor = Cursors.Hand;
         btnStart.Click += (s, e) => StartGame();
         pnlStart.Controls.Add(btnStart);
